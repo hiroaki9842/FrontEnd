@@ -1,17 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// src/index.ts
+class Header {
+  private element: HTMLElement;
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  constructor() {
+      this.element = document.createElement('header');
+      this.element.textContent = 'My Website Header';
+  }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  render(target: HTMLElement) {
+      target.appendChild(this.element);
+  }
+}
+
+const header = new Header();
+header.render(document.getElementById('app')!);
