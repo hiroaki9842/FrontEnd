@@ -1,0 +1,61 @@
+/* 共通のスタイル */
+.bs-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+/* ロゴのスタイル */
+.bs-header-logo {
+  width: fit-content;
+}
+
+.bs-header-logo img {
+  width: 300px;
+  height: 102px;
+}
+
+/* メニュー項目のスタイル */
+.bs-header-menu {
+  margin: 0 10px;
+  text-align: center;
+}
+
+.bs-header-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.bs-header-menu--icn {
+  width: 50px;
+  height: 50px;
+}
+
+.bs-header-menu--txt {
+  display: block;
+  font-size: 12px;
+}
+
+/* フリーダイヤルのスタイル */
+.bs-header-tel {
+  text-align: right;
+}
+
+#free-tel-no {
+  color: orange;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#free-tel-text {
+  font-size: 12px;
+  color: #888;
+}
+
+/* 右寄せスタイル */
+.right-align {
+  margin-left: auto;
+}
