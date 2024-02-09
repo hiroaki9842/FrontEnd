@@ -1,0 +1,27 @@
+.footer_copyright{
+  display: block;
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.footer_contena{
+  margin: auto;
+  position: relative;
+  width: 100%;
+}
+
+.footer-content{
+  background: #333;
+  padding: 20px 0 10px;
+}
+
+.footer{
+  display: block;
+}
+
+span {
+  font-size: 12px;
+  text-decoration: underline;
+}
