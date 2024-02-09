@@ -58,4 +58,26 @@ p{
   width: 25%;
 }
 
-TODO:文字の大きさのみ;
+.btn-inq-usefullinfo{
+  align-items: center;
+  background-image: -webkit-linear-gradient(-90deg,#fff 0,#fff 90%,#eee 100%);
+  border-width: 1px;
+  border-color: #eee;
+  border-style: solid;
+  border-radius: 6px;
+  box-shadow: 0 3px 0 0 rgba(0,0,0,.15);
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 0;
+  min-height: 34px;
+  width: 146px;
+}
+
+.btn-inq--ttl{
+  color: #333;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+TODO:文字の大きさ変更;

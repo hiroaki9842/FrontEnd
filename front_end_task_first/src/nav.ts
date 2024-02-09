@@ -217,8 +217,13 @@ export class Nav {
           small_item_four_div.appendChild(small_item_four_9);
 
           const small_item_four_10 = document.createElement('p');
-          small_item_four_10.textContent = 'お客様相談センター';
-          small_item_four_div.appendChild(small_item_four_10);    
+          small_item_four_10.classList.add('btn-inq-usefullinfo');
+          const btn_inq_ttl = document.createElement('span')
+          btn_inq_ttl.classList.add('btn-inq--ttl');
+          btn_inq_ttl.textContent = 'お客様相談センター';
+
+          small_item_four_div.appendChild(small_item_four_10);
+          small_item_four_10.appendChild(btn_inq_ttl);
   }
   
   render(target: HTMLElement) {

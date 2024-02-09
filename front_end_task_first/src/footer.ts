@@ -16,6 +16,7 @@ export class Footer {
     footer_inner_div.appendChild(footer_copyright);
 
     const footer_item = document.createElement('span')
+    footer_item.classList.add('footer_copyright');
     footer_item.textContent = "©2000 - 2024 IDOM Inc."
     footer_copyright.appendChild(footer_item);
   }
