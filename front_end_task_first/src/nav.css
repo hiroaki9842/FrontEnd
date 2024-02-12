@@ -80,4 +80,36 @@ p{
   line-height: 1;
 }
 
+/* nav画像部分 */
+.imag-inner-div{
+align-items: normal;
+display: flex;
+justify-content: center;
+margin: 50px 0 0;
+}
+
+.content_imag_item_div{
+  display: block;
+  margin: 0 0 0 28px;
+  width: 210px;
+}
+
+.content_imag_item_div figcaption {
+  color: #fff;
+    display: block;
+    font-size: 14px;
+    margin: 15px 0 0;
+}
+
+figure{
+  margin: 0;
+}
+
+img{
+  vertical-align: top;
+  border: 0;
+}
+
+
+
 TODO:文字の大きさ変更;

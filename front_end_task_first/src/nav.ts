@@ -23,6 +23,7 @@ export class Nav {
     const content_inner_div = document.createElement('div');
     content_inner_div.classList.add('nav-inner-text');
     content_main_div.appendChild(content_inner_div);
+    
 
       //フッター(左から１番目の項目全体)
       const content_item_first_div = document.createElement('div');
@@ -224,6 +225,50 @@ export class Nav {
 
           small_item_four_div.appendChild(small_item_four_10);
           small_item_four_10.appendChild(btn_inq_ttl);
+
+        //imagインナーのdiv
+        const content_imag_inner_div = document.createElement('div');
+        content_imag_inner_div.classList.add('imag-inner-div');
+        content_main_div.appendChild(content_imag_inner_div);
+
+        for (let i = 0; i < 5; i++) {
+        const content_imag_item_div = document.createElement('div');
+        content_imag_item_div.classList.add('content_imag_item_div');
+        content_imag_inner_div.appendChild(content_imag_item_div);
+        
+          const content_imag_figure = document.createElement('figure');
+          content_imag_figure.classList.add('content_imag_figure_' + (i + 1)); 
+          content_imag_item_div.appendChild(content_imag_figure);
+
+          const imgElement = document.createElement('img');
+          imgElement.src = `/nav_${i + 1}.png`;
+          imgElement.alt = `Image ${i + 1}`;
+          imgElement.width = 210;
+          imgElement.height = 140;        
+          content_imag_figure.appendChild(imgElement);
+          
+          const figcaption = document.createElement('figcaption');
+
+          switch(i) {
+            case 0:
+              figcaption.textContent = "最大6ヶ月無料の特別ローン"
+              break;
+            case 1:
+            figcaption.textContent = "車の価格・燃費・スペックを比べてチェック"
+            break;
+            case 2:
+            figcaption.textContent = "NOREL（ノレル）みんなのマイ・カーライフ・サブスク"
+            break;
+            case 3:
+            figcaption.textContent = "クルマの個人売買をお手伝い"
+            break;
+            case 4:
+            figcaption.textContent = "新車情報の車のニュース更新中"
+            break;   
+          }
+          content_imag_figure.appendChild(figcaption);
+          content_imag_item_div.appendChild(content_imag_figure);
+      }
   }
   
   render(target: HTMLElement) {

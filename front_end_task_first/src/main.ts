@@ -1,6 +1,6 @@
-// main.ts
-
 import './main.css'; // main.css をインポート
+
+
 
 export class Main {
   private element: HTMLElement;
