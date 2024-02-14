@@ -51,19 +51,19 @@ export class Header {
 
   private createMenuContainer(iconSrc: string, text: string, imgId: string, alignmentClass?: string): HTMLDivElement {
     const container = document.createElement('div');
-    container.classList.add('bs-header-menu', alignmentClass || ''); // スタイルを適用するクラス
+    container.classList.add('bs-header-menu', alignmentClass || ''); 
 
     const iconImage = document.createElement('img');
-    iconImage.src = iconSrc; // 画像ファイルのパスを直接指定
+    iconImage.src = iconSrc; 
     iconImage.alt = text;
     iconImage.width = 50;
     iconImage.height = 50;
-    iconImage.classList.add('bs-header-menu--icn'); // スタイルを適用するクラス
+    iconImage.classList.add('bs-header-menu--icn'); 
     iconImage.decoding = 'async';
-    iconImage.id = imgId;  // imgIdを使用してidを設定
+    iconImage.id = imgId;
 
     const textElement = document.createElement('span');
-    textElement.classList.add('bs-header-menu--txt'); // スタイルを適用するクラス
+    textElement.classList.add('bs-header-menu--txt'); 
     textElement.textContent = text;
 
     container.appendChild(iconImage);
