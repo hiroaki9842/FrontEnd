@@ -1,0 +1,49 @@
+.marker_body_div{
+  margin-bottom: 80px;
+}
+
+.marker_body_heder {
+  background-color: #f2faf5;
+  padding: 15px 0 15px 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.marker_body_heder::before {
+  background-color: #008b4f;
+  content: '';
+  display: block;
+  width: 4px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.marker_body_heder_span {
+  color: #008b4f;
+}
+
+.marker__body_ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.marker_li::before, .body_li::before{
+  content: ">";
+  margin-right: 10px; 
+}
+
+.marker_li, .body_li {
+  font-size: 14px;
+  color: #866134;
+  text-align: left;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  list-style:none;
+  width: calc(25% - 10px); /* 4つずつ */
+}
+
+/* TODO:css見直し */
