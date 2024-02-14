@@ -2,7 +2,6 @@ import './question.css';
 export class Question {
     constructor() {
         this.element = document.createElement('section');
-        this.element.classList.add('question_main');
         const question_header = document.createElement('h2');
         question_header.classList.add('question_header');
         this.element.appendChild(question_header);
@@ -77,7 +76,7 @@ export class Question {
                 case 4:
                     question_item_h4_span.textContent = "車検や修理といったアフターサービスはありますか？";
                     question_item_answer_span.textContent = "対応可能です。";
-                    question_item_text.textContent = "ガリバーのアフターサービスは、全国の店舗で受けていただくことが可能です。 他県のガリバーで購入した車も鳥取県のお店で修理対応します。 お近くのお店までお問い合わせください。";
+                    question_item_text.innerHTML = '<span class="shop-orange">ガリバーのアフターサービスは、全国の店舗で受けていただくことが可能です。</span> 他県のガリバーで購入した車も鳥取県のお店で修理対応します。 お近くのお店までお問い合わせください。';
                     question_item.appendChild(question_item_text);
                     question_item_link.textContent = "アフターサービスについて詳しく知る";
                     question_item.appendChild(question_item_link_div);
@@ -86,15 +85,54 @@ export class Question {
                     question_item_text_second.classList.add('question_item_text');
                     question_item_text_second.textContent = "ガリバーの車検は全国の約460店舗※1と700拠点※2のガリバー認定工場で車検を実施しております。お近くのガリバー店舗にご相談ください。";
                     question_item.appendChild(question_item_text_second);
-                    const question_item_link_second = document.createElement('a');
-                    question_item_link_second.classList.add('question_item_link');
-                    question_item_link_second.textContent = "車検について詳しく知る";
-                    question_item.appendChild(question_item_link_div);
-                    question_item_link_div.appendChild(question_item_link_second);
+                    const question_item_link_div_second = document.createElement('div');
+                    question_item_link_div_second.classList.add('question_item_link_div');
+                    question_item.appendChild(question_item_link_div_second);
+                    const question_item_link_secound = document.createElement('a');
+                    question_item_link_secound.textContent = "車検について詳しく知る";
+                    question_item_link_secound.classList.add('question_item_link');
+                    question_item_link_div_second.appendChild(question_item_link_secound);
+                    const question_item_ul_second = document.createElement('ul');
+                    question_item_ul_second.classList.add('question_item_ul');
+                    question_item.appendChild(question_item_ul_second);
+                    for (let li_count = 0; li_count < 2; li_count++) {
+                        const question_item_li = document.createElement('li');
+                        question_item_li.classList.add('question_item_li');
+                        switch (li_count) {
+                            case 0:
+                                question_item_li.textContent = `当社調べ2018年11月時点 当社直営店、加盟店の合算店舗数`;
+                                break;
+                            case 1:
+                                question_item_li.textContent = `2018年11月時点`;
+                                break;
+                        }
+                        question_item_ul_second.appendChild(question_item_li);
+                    }
                     break;
                 case 5:
                     question_item_h4_span.textContent = "看板の色が違うお店は何が違うのですか？";
                     question_item_answer_span.textContent = "取り扱うお車やコンセプトにより看板が異なります。";
+                    for (let p_count = 0; p_count < 2; p_count++) {
+                        const question_item_text = document.createElement('p');
+                        question_item_text.classList.add('question_item_text');
+                        switch (p_count) {
+                            case 0:
+                                question_item_text.textContent = `ガリバーには下記8種類のお店がございます。お店選びの参考にしてみてください。`;
+                                break;
+                            case 1:
+                                question_item_text.innerHTML =
+                                    `<span class="shop-orange">ガリバー：</span>皆様おなじみ主に中古車の買取を行っている店。敷地が大きな店舗に関しては販売にも力を入れています。<br>
+                  <span class="shop-orange">ガリバーアウトレット：</span>中古車の販売を主に行っています。車の買取も行っていますので、クルマの乗り換えならここ！<br>
+                  <span class="shop-orange">ガリバーミニクル：</span>中古軽自動車専門店。専門店だから、多くの軽自動車を乗り比べられます！キッズコーナー完備でお母さんも安心。<br>
+                  <span class="shop-orange">スナップハウス：</span>ミニバンやSUVをはじめとしたファミリーカー専門店。ゆったりとした店内でくつろぎながらお車選びができます。<br>
+                  <span class="shop-orange">ワオタウン：</span>ガリバー系列店の中でも一際大きな展示場が特徴のお店です。ご家族で参加できるイベントが盛りだくさん！<br>
+                  <span class="shop-orange">HUNT：</span>ガリバーproduceのセレクトショップ。軽自動車から輸入車まで様々な車種が「見て」「触って」「乗れる」新しいおクルマ選びのお店です。<br>
+                  <span class="shop-orange">LIBERALA：</span>外車・輸入車の専門店。お客様のリアルな感性を第一にした最良の一台を提案します。一ランク上のご提案をあなたに。<br>
+                  <span class="shop-orange">BRAT：</span>自然を楽しむライフスタイルをSUV専門店です。車だけでなく、アウトドア用品も併せて販売しています。ぶらっとお立ち寄りください。`;
+                                break;
+                        }
+                        question_item.appendChild(question_item_text);
+                    }
                     break;
             }
         }

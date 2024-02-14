@@ -1,0 +1,59 @@
+.region_prefecture_div{
+  margin-bottom: 80px;
+}
+
+.region_prefecture_header {
+  background-color: #f2faf5;
+  padding: 15px 0 15px 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.region_prefecture_header::before {
+  background-color: #008b4f;
+  content: '';
+  display: block;
+  width: 4px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.region_prefecture_span {
+  color: #008b4f;
+}
+
+.region_prefecture_ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.prefecture_li::before, .region_li::before{
+  content: ">";
+  margin-right: 10px; 
+}
+
+.prefecture_li{
+  font-size: 14px;
+  color: #866134;
+  text-align: left;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  list-style:none;
+  width: calc(25% - 10px); /* 4つずつ */
+}
+
+.region_li {
+  font-size: 14px;
+  color: #866134;
+  text-align: left;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  list-style:none;
+  width: calc(40% - 10px); /* 2つずつ */
+}
+
+/* TODO:css見直し */

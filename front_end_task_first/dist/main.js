@@ -1,5 +1,7 @@
 import './main.css';
 import { ShopHeader } from './shop_header';
+import { RegionPrefecture } from './region_prefecture';
+import { MarkerBody } from './marker_body';
 import { Question } from './question';
 export class Main {
     constructor() {
@@ -7,6 +9,10 @@ export class Main {
         this.element.classList.add('main-content');
         const shopheader = new ShopHeader();
         this.element.appendChild(shopheader.getElement());
+        const regionprefecture = new RegionPrefecture();
+        this.element.appendChild(regionprefecture.getElement());
+        const markerbody = new MarkerBody();
+        this.element.appendChild(markerbody.getElement());
         const question = new Question();
         this.element.appendChild(question.getElement());
     }
