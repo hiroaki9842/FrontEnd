@@ -1,0 +1,35 @@
+.shop-header{
+  /* margin-left: 100px;
+  margin-right: 100px; */
+  TODO:メインの左右の余白修正(main.css);
+}
+
+
+.header-content{
+  margin: -5px 0 0;
+  font-size: 36px;
+  font-weight: 100;
+  color: #008042;
+}
+
+.header-ls{
+  padding: 5px 0 0;
+  font-size: 16px;
+  clear: both;
+  margin: 0;
+}
+
+.small-text{
+  font-size: 12px;
+}
+
+.ul-text{
+  font-size: 12px;
+  text-justify: inter-ideograph;
+  padding-left: 1.2em;
+  margin-top: 5px;
+}
+
+.li-text{
+  list-style:  "※"; 
+} 

@@ -1,21 +1,27 @@
 import './main.css'; // main.css をインポート
-
-
+import { ShopHeader } from './shop_header';
+import { Question } from './question';
 
 export class Main {
   private element: HTMLElement;
-
+  
   constructor() {
     // HTMLDivElementとして初期化
     this.element = document.createElement('main');
-    this.element.classList.add('main-content'); // main-content クラスを追加
+    this.element.classList.add('main-content'); 
 
-    // ここにメインコンテンツの内容を追加する
 
-    const content = document.createElement('p');
-    content.textContent = 'メインコンテンツの内容';
+    // // ここにメインコンテンツの内容を追加する
+    // const content = document.createElement('p');
+    // content.textContent = 'メインコンテンツの内容';
 
-    this.element.appendChild(content);
+    const shopheader = new ShopHeader();
+    this.element.appendChild(shopheader.getElement());
+
+    const question = new Question();
+    this.element.appendChild(question.getElement());
+
+    // this.element.appendChild(content);
   }
 
   render(target: HTMLElement) {

@@ -36,20 +36,15 @@ h3{
   margin: 20px 0 0 0;
 }
 
-p{
-  color: #fff;
-  display: block;
-  font-size: 15px;
-  margin: 10px 0 0;
-  text-decoration: underline;
-}
-
 .nav-inner-text{
   align-items: normal;
   display: flex;
   justify-content: center;
   margin: 0 auto;
   width: 1200px;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: underline;
 }
 
 .item_div{
