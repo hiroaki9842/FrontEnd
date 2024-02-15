@@ -57,3 +57,6 @@ export class RegionPrefecture {
     return this.element;
   }
 }
+
+
+
