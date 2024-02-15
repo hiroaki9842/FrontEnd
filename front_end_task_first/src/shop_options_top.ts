@@ -82,10 +82,6 @@ export class ShopOptionsTop {
           break
       }
     }
-
-    
-  
-
   }
   getElement(): HTMLElement {
     return this.element;
