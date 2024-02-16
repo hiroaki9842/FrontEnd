@@ -1,0 +1,157 @@
+.carstock-header{
+  border-top: 3px solid #008b4f;
+  border-bottom: 1px solid #008b4f;
+  padding: 15px 0 15px 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.carstock-header-span{
+  font-size: 20px;
+  color: #008b4f;
+}
+
+/* 赤ボタン */
+.message-btn{
+  display: flex;
+  padding: 0 0 20px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  align-items: center;
+}
+
+.btn-a{
+  padding: 17px 20px 16px 20px;
+  margin: 0 0 0 30px;
+  min-width: 350px;
+  background: #e50000;
+  font-size: 18px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  display: block;
+}
+
+/* 特記事項 */
+ul{  
+  padding-inline-start: 0px;
+}
+
+.special-note-ul{
+  list-style-type: none;
+  display: flex;
+}
+
+.special-note-li::before{
+  content: '※';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.special-note-li{
+  font-size: 13px;
+  position: relative;
+  padding-left: 1em;
+  margin-top: 10px;
+}
+
+
+/***** 中古車情報 *****/
+.figure{
+  margin: 0;
+  display: block;
+}
+
+/* 画像 */
+.car-img-box{
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.img-tag{
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.img{
+  vertical-align: top;
+  border: 0;
+}
+
+/* 車両情報全体 */
+/* 車両名 */
+.car-stock-name{
+  color: #333;
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 10px 0 0;
+}
+
+/* 総支払額 */
+.car-stock-total-price{
+  align-items: baseline;
+  color: #f27721;
+  display: flex;
+  font-size: 11px;
+  font-weight: 700;
+  justify-content: flex-start;
+}
+
+.car-stock-total-price .ttl{
+  margin: 0 0 0 5px;
+}
+
+
+/* 車両データ */
+.car-stock-date{
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.car-stock-date,.upper,.datalist{
+  margin: 2px 0 0;
+}
+
+.car-stock-date,.upper,.datalist,.ttl{
+  margin: 0 5px 0 0;
+}
+
+.car-stock-date,.lower,.datalist{
+  margin: 10px 0 0;
+}
+
+.car-stock-date,.datalist{
+  align-items: center;
+  border-left: 1px solid #333;
+  color: #333;
+  display: flex;
+  font-size: 11px;
+  justify-content: flex-start;
+  line-height: 1;
+  margin: 5px 0 0;
+  padding: 0 10px;
+}
+
+.car-stock-date,.lower,.datalist,.ttl{
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.car-stock-date,.lower,.datalist,.ttl::after{
+  content: '：';
+}
+
+/* TODO:css見直し */
