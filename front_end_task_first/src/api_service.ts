@@ -34,14 +34,16 @@ export async function fetchShopData(requestParams: ShopRequest): Promise<ShopRes
     //レスポンスからJSON形式でデータを取得する
     const data = await response.json();
 
-return data as ShopResponse;
-} catch (error) {
-  // API呼び出し時にエラーが起こった場合
-  if (error instanceof Error) {
-    console.error('店舗取得API中にエラーが発生しました:', error.message);
-  } else {
-    console.error('店舗取得API中に不明なエラーが発生しました:', error);
+  //例)response.shop[0]で表示できるようにする為
+  return { shop: data }
+
+  } catch (error) {
+    // API呼び出し時にエラーが起こった場合
+    if (error instanceof Error) {
+      console.error('店舗取得API中にエラーが発生しました:', error.message);
+    } else {
+      console.error('店舗取得API中に不明なエラーが発生しました:', error);
+    }
+    throw error;
   }
-  throw error;
-}
 }

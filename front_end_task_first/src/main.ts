@@ -1,6 +1,7 @@
 import './main.css';
 import { ShopHeader } from './shop_header';
 import { ShopOptionsTop} from './shop_options_top';
+import { ShopData } from './shop_data';
 import { RegionPrefecture } from './region_prefecture';
 import { CarStock } from './car_stock';
 import { MarkerBody } from './marker_body';
@@ -19,6 +20,9 @@ export class Main {
 
     const shop_options_top = new ShopOptionsTop();
     this.element.appendChild(shop_options_top.getElement());
+
+    const shopdata = new ShopData();
+    this.element.appendChild(shopdata.getElement());
 
     const regionprefecture = new RegionPrefecture();
     this.element.appendChild(regionprefecture.getElement());

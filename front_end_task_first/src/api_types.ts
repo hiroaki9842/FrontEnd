@@ -11,8 +11,6 @@ export interface ShopRequest {
   // zone_cd: string;
 }
 
-// PrefectureRequest を ShopRequest から継承して定義
-// export interface PrefectureRequest extends ShopRequest {}
 
 //////レスポンスの型定義////////
 
@@ -48,7 +46,7 @@ interface ShopImage {
 
 //店舗取得API全体の型定義
 export interface ShopResponse {
-  shop: {
+  shop:{
     id: string;
     address1: string;
     address2: string;
@@ -118,5 +116,5 @@ export interface ShopResponse {
     stock_tracking_no: string;
     shop_url: string;
     shop_labels: ShopLabel[];
-  };
+  }[];
 }
