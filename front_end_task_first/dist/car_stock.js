@@ -83,7 +83,7 @@ export class CarStock {
                         title_span.appendChild(one_title_span);
                         break;
                     case 3:
-                        figcaption_span.classList.add('car-stock-date upper');
+                        figcaption_span.classList.add('car-stock-date', 'upper');
                         img_figcaption.appendChild(figcaption_span);
                         const vehicle_price_span = document.createElement('span');
                         vehicle_price_span.classList.add('datalist');
@@ -103,8 +103,48 @@ export class CarStock {
                         figcaption_span.appendChild(expenses_price_span);
                         break;
                     case 4:
-                        figcaption_span.classList.add('car-stock-date lower');
+                        figcaption_span.classList.add('car-stock-date', 'lower');
                         img_figcaption.appendChild(figcaption_span);
+                        const model_year_item = document.createElement('span');
+                        model_year_item.classList.add('datalist');
+                        const model_year_span = document.createElement('span');
+                        model_year_span.classList.add('datalist');
+                        model_year_span.textContent = "H31年";
+                        const model_year_ttl = document.createElement('span');
+                        model_year_ttl.classList.add('ttl');
+                        model_year_ttl.textContent = "年式";
+                        model_year_span.insertBefore(model_year_ttl, model_year_span.firstChild);
+                        figcaption_span.appendChild(model_year_span);
+                        const distance_item = document.createElement('span');
+                        distance_item.classList.add('datalist');
+                        const distance_span = document.createElement('span');
+                        distance_span.classList.add('datalist');
+                        distance_span.textContent = "96千km";
+                        const distance_ttl = document.createElement('span');
+                        distance_ttl.classList.add('ttl');
+                        distance_ttl.textContent = "走行距離";
+                        distance_span.insertBefore(distance_ttl, distance_span.firstChild);
+                        figcaption_span.appendChild(distance_span);
+                        const guarantee_item = document.createElement('span');
+                        guarantee_item.classList.add('datalist');
+                        const guarantee_span = document.createElement('span');
+                        guarantee_span.classList.add('datalist');
+                        guarantee_span.textContent = "付";
+                        const guarantee_ttl = document.createElement('span');
+                        guarantee_ttl.classList.add('ttl');
+                        guarantee_ttl.textContent = "保証";
+                        guarantee_span.insertBefore(guarantee_ttl, guarantee_span.firstChild);
+                        figcaption_span.appendChild(guarantee_span);
+                        const maintenance_item = document.createElement('span');
+                        maintenance_item.classList.add('datalist');
+                        const maintenance_span = document.createElement('span');
+                        maintenance_span.classList.add('datalist');
+                        maintenance_span.textContent = "付";
+                        const maintenance_ttl = document.createElement('span');
+                        maintenance_ttl.classList.add('ttl');
+                        maintenance_ttl.textContent = "法定整備";
+                        maintenance_span.insertBefore(maintenance_ttl, maintenance_span.firstChild);
+                        figcaption_span.appendChild(maintenance_span);
                         break;
                 }
             }
