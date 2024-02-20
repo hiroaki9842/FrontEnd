@@ -7,22 +7,30 @@ export class Header {
     // headerタグの生成
     this.element = document.createElement('header');
 
+    const headerInnerH2 = document.createElement('h6');
+    headerInnerH2.classList.add('bs-header-inner-h2');
+    headerInnerH2.textContent = "鳥取県の中古車販売・買取店舗一覧"
+    this.element.appendChild(headerInnerH2);
+    
     // ヘッダー内部のdiv
     const headerInnerDiv = document.createElement('div');
     headerInnerDiv.classList.add('bs-header-inner');
 
     // Gulliverロゴ画像の表示
     const logoContainer = document.createElement('div');
-    logoContainer.classList.add('bs-header-logo', 'left-align');
+    logoContainer.classList.add('bs-header-logo');
 
     const logoImage = document.createElement('img');
     logoImage.id = 'glv-logo-img';
     logoImage.src = '/logo.png';
-
     logoContainer.appendChild(logoImage);
 
+    const three_item_div = document.createElement('div')
+    three_item_div.classList.add('three-item-div');
+    
+
     // お気に入りアイコンとテキストの表示
-    const favologoContainer = this.createMenuContainer('/favorite.png', 'お気に入り', 'favo-logo-img', 'right-align');
+    const favologoContainer = this.createMenuContainer('/favorite.png', 'お気に入り(0件)', 'favo-logo-img', 'right-align');
     // 検索履歴のアイコンとテキスト表示
     const histologoContainer = this.createMenuContainer('/history.png', '検索履歴', 'histo-logo-img', 'right-align');
 
@@ -44,9 +52,10 @@ export class Header {
     // 要素の構成
     this.element.appendChild(headerInnerDiv);
     headerInnerDiv.appendChild(logoContainer);
-    headerInnerDiv.appendChild(favologoContainer);
-    headerInnerDiv.appendChild(histologoContainer);
-    headerInnerDiv.appendChild(freeTelContainer);
+    headerInnerDiv.appendChild(three_item_div)
+    three_item_div.appendChild(favologoContainer);
+    three_item_div.appendChild(histologoContainer);
+    three_item_div.appendChild(freeTelContainer);
   }
 
   private createMenuContainer(iconSrc: string, text: string, imgId: string, alignmentClass?: string): HTMLDivElement {
@@ -56,8 +65,8 @@ export class Header {
     const iconImage = document.createElement('img');
     iconImage.src = iconSrc; 
     iconImage.alt = text;
-    iconImage.width = 50;
-    iconImage.height = 50;
+    iconImage.width = 40;
+    iconImage.height = 40;
     iconImage.classList.add('bs-header-menu--icn'); 
     iconImage.decoding = 'async';
     iconImage.id = imgId;
