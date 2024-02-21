@@ -29,16 +29,16 @@ export class ShopData {
 
     console.log("店舗取得API正常");
     if (response.shop && Array.isArray(response.shop) && response.shop.length > 0) {
-      console.log('Shop :', response.shop.length);
-      console.log('Shop :', response.shop[0]);
+      // console.log('Shop :', response.shop.length);
+      // console.log('Shop :', response.shop[0]);
       console.log('Shop ID:', response.shop[0].id);
 
-      this.element.textContent = response.shop[0].id
+      // this.element.textContent = response.shop[0].id
 
       const shop_name = document.createElement('div'); 
       shop_name.classList.add('shop_name');
       this.element.appendChild(shop_name)
-      shop_name.textContent = response.shop[0].id
+      // shop_name.textContent = response.shop[0].id
 
     } else {
       console.error('取得したデータが不正です。');
