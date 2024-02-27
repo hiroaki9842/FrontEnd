@@ -24,7 +24,6 @@ export class Nav {
     content_inner_div.classList.add('nav-inner-text');
     content_main_div.appendChild(content_inner_div);
     
-      //TODO:"aタグの付与";
       //フッター(左から１番目の項目全体)
       const content_item_first_div = document.createElement('div');
       content_item_first_div.classList.add('item_div');

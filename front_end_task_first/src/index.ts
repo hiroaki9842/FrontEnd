@@ -3,7 +3,6 @@ import { Header } from './header';
 import { Main } from './main';
 import { Nav } from './nav';
 import { Footer } from './footer';
-
 // //API関連フィイルのインポート
 // import { fetchShopData } from './api_service';
 // import { ShopRequest } from './api_types';

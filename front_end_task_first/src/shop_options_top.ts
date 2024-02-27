@@ -88,25 +88,3 @@ export class ShopOptionsTop {
   }
 }
 
-//div
-  //div 店舗件数
-  //div
-  //ul  件数セレクトプルダウンと市区町村を絞り込む全体
-    //li  件数セレクトプルダウン
-      //form
-        //input
-        //div
-          //select
-        //div
-      //form
-    //li
-
-    //li  市区町村で絞り込みボタン
-      //div
-      //div
-    //li
-
-  //ul
-  //div
-  //div
-//div

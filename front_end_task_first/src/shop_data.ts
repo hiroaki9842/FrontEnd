@@ -164,6 +164,7 @@ export class ShopData {
                     case 2:
                       const banner_img = document.createElement('img')
                       banner_img.classList.add('banner-img')
+                      banner_img.src = response.shop[shop_count].profile_img_path
                       shop_info_button_li.appendChild(banner_img)
                       break
                 }
@@ -183,9 +184,9 @@ export class ShopData {
       console.log('shop_labels:', response.shop[3].shop_labels[0].shop_label_name);
       console.log('shop_labels:', response.shop[3].shop_labels[1].shop_label_name);
       console.log('shop_labels:', response.shop[3].shop_labels[2].shop_label_name);
-      // console.log('shop_labels:', response.shop[3].shop_labels);
-    
-      
+
+      console.log('caption:', response.shop[0].shop_labels[2].shop_label_name);
+
 
      ////////// ログ表示//////////////////////////////////////////
 
