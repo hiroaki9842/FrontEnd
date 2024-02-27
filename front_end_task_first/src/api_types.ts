@@ -52,7 +52,8 @@ export interface ShopResponse {
     address2: string;
     begin_date: string;
     calendars: {
-      calendar: Calendar;
+      year: number;
+      month: number;
       weeks: CalendarWeek[];
       holidays: number[];
     }[];

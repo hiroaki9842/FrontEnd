@@ -1,8 +1,8 @@
 .main-content {
   padding-top: 30px; /* ヘッダーの高さに応じて調整 */
   padding-bottom: 30px; /* フッターの高さに応じて調整 */
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 8%;
+  margin-right: 8%;
 
   TODO:メインの左右の余白修正;
 }
