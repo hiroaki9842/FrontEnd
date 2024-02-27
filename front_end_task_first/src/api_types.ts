@@ -116,6 +116,9 @@ export interface ShopResponse {
     zone_name: string;
     stock_tracking_no: string;
     shop_url: string;
-    shop_labels: ShopLabel[];
+    // shop_labels: ShopLabel[];
+    shop_labels:{
+      shop_label_name:string;
+    }[];
   }[];
 }

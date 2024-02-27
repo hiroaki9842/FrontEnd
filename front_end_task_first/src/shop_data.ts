@@ -171,31 +171,20 @@ export class ShopData {
     }
 
       ////////// ログ表示//////////////////////////////////////////
-      // console.log('Shop :', response.shop.length);
-      // console.log('Shop :', response.shop[0].dept_name);
-      // console.log('休日(月):', response.shop[0].calendars[0].month);
-      // console.log('休日(日):', response.shop[0].calendars[0].holidays);
-      // console.log('休日(月):', response.shop[0].calendars[1].month);
-      // console.log('休日(日):', response.shop[0].calendars[1].holidays);
-      
-      // console.log('Shop :', response.shop[1].dept_name);
-      // console.log('休日(月):', response.shop[1].calendars[0].month);
-      // console.log('休日(日):', response.shop[1].calendars[0].holidays);
-      // console.log('休日(月):', response.shop[1].calendars[1].month);
-      // console.log('休日(日):', response.shop[1].calendars[1].holidays);
-
-      // console.log('Shop :', response.shop[2].dept_name);
-      // console.log('休日(月):', response.shop[2].calendars[0].month);
-      // console.log('休日(日):', response.shop[2].calendars[0].holidays);
-      // console.log('休日(月):', response.shop[2].calendars[1].month);
-      // console.log('休日(日):', response.shop[2].calendars[1].holidays);
-
-      // console.log('Shop :', response.shop[3].dept_name);
-      // console.log('休日(月):', response.shop[3].calendars[0].month);
-      // console.log('休日(日):', response.shop[3].calendars[0].holidays);
-      // console.log('休日(月):', response.shop[3].calendars[1].month);
-      // console.log('休日(日):', response.shop[3].calendars[1].holidays);
-      // console.log('営業時間):', response.shop[3].next_day_opening_time);
+      //TODO:ラベル表示// 
+      console.log('shop_labels:', response.shop[0].shop_labels[0]);
+      console.log('shop_labels:', response.shop[0].shop_labels[0].shop_label_name);
+      console.log('shop_labels:', response.shop[1].shop_labels);
+      console.log('shop_labels:', response.shop[2].shop_labels);
+      console.log('shop_labels:', response.shop[2].shop_labels[0].shop_label_name);
+      console.log('shop_labels:', response.shop[2].shop_labels[1].shop_label_name);
+      console.log('shop_labels:', response.shop[2].shop_labels[2].shop_label_name);
+      console.log('shop_labels:', response.shop[3].shop_labels);
+      console.log('shop_labels:', response.shop[3].shop_labels[0].shop_label_name);
+      console.log('shop_labels:', response.shop[3].shop_labels[1].shop_label_name);
+      console.log('shop_labels:', response.shop[3].shop_labels[2].shop_label_name);
+      // console.log('shop_labels:', response.shop[3].shop_labels);
+    
       
 
      ////////// ログ表示//////////////////////////////////////////
