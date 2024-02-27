@@ -5,6 +5,9 @@
 .shop-count-div{
   margin: 0 25px 0 0;
   font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shop-span{
@@ -25,9 +28,12 @@
   background: #fff;
   border: 1px solid #d2d2d2;
   overflow: hidden;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 30px;
-  width: 100px;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: left;
 }
 
 .shop-form-select{
@@ -46,10 +52,10 @@
   color: #2bbfa2;
   font-size: 16px;
   cursor: pointer;
-
+  margin-left: 30px;
   display: block;
   font-weight: 700;
-
+  width: 200px;
   border-radius: 5px;
   box-shadow: 0 2px 0 rgba(0,0,0,.2);
   text-align: center;
