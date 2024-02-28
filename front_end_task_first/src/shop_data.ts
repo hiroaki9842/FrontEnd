@@ -184,10 +184,7 @@ export class ShopData {
       console.log('shop_labels:', response.shop[3].shop_labels[0].shop_label_name);
       console.log('shop_labels:', response.shop[3].shop_labels[1].shop_label_name);
       console.log('shop_labels:', response.shop[3].shop_labels[2].shop_label_name);
-
-      console.log('caption:', response.shop[0].shop_labels[2].shop_label_name);
-
-
+      // console.log('caption:', response.shop[0].shop_labels[2].shop_label_name);
      ////////// ログ表示//////////////////////////////////////////
 
     } else {
