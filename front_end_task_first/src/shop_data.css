@@ -63,7 +63,52 @@ li{
 
 .shop-info-detail-dd{
   padding-left: 60px;
+  margin-top: 10px;
 }
+
+dt{
+  margin-top: 6px;
+}
+
+.shop-info-detail-dd-zero,.shop-info-detail-dd-first{
+  display: flex;
+  justify-content: left;
+}
+
+.shop-info-detail-dd-first{
+  padding-left: 40px;
+}
+
+.free-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #de5514;
+  font-size: 10px;
+  margin-left: 30px;
+  border: solid 2px #de5514;
+  border-radius: 4px;
+  width: 30px;
+  height: 15px;
+}
+
+.look-map{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 12px;
+color: #ffffff;
+margin-left: 30px;
+background-color: #1abc9c;
+border-radius: 2px;
+width: 80px;
+height: 30px;
+}
+
+.shop-info-detail-dd-third,.open-day{
+  color:#0082a0;
+}
+
 
 .closed-day{
   margin:0;

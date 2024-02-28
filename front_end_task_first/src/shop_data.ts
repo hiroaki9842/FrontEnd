@@ -93,11 +93,21 @@ export class ShopData {
                   //ddに追加する要素の判断
                   switch(shop_info_detail_dtdd_count){
                   case 0:
+                    shop_info_detail_dd.classList.add('shop-info-detail-dd-zero')
                     shop_info_detail_dd.textContent = response.shop[shop_count].disp_dept_address
+                    const look_map = document.createElement('div')
+                    look_map.classList.add('look-map')
+                    look_map.textContent = "地図を見る"
+                    shop_info_detail_dd.appendChild(look_map)
                     break
 
                   case 1:
+                    shop_info_detail_dd.classList.add('shop-info-detail-dd-first')
                     shop_info_detail_dd.textContent = response.shop[shop_count].freedial
+                    const free_icon = document.createElement('div')
+                    free_icon.classList.add('free-icon')
+                    free_icon.textContent = "無料"
+                    shop_info_detail_dd.appendChild(free_icon)
                     break
 
                   case 2:
@@ -106,9 +116,9 @@ export class ShopData {
 
                   case 3:
                     if(response.shop[shop_count].today_opening_time == null){
-                      shop_info_detail_dd.textContent = "休業中"
+                      shop_info_detail_dd.innerHTML = "<p class=shop-info-detail-dd-third>本日休業</p>"
                     }else{
-                      shop_info_detail_dd.textContent = `${response.shop[shop_count].today_opening_time} ~ ${response.shop[shop_count].today_closing_time} 現在営業中`;
+                      shop_info_detail_dd.innerHTML = `<p>${response.shop[shop_count].today_opening_time} ~ ${response.shop[shop_count].today_closing_time} <span class=open-day>現在営業中</span></p>`;
                     }
                     const closed_day = document.createElement('p')
                     closed_day.classList.add('closed-day')
