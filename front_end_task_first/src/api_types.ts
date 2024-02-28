@@ -29,13 +29,13 @@ interface Calendar {
   holiday_flag: boolean;
 }
 
-//店舗ラベルの型定義
-interface ShopLabel {
-  shop_label_category_id: number;
-  shop_label_category_name: string;
-  shop_label_id: number;
-  shop_label_name: string;
-}
+// //店舗ラベルの型定義
+// interface ShopLabel {
+//   shop_label_category_id: number;
+//   shop_label_category_name: string;
+//   shop_label_id: number;
+//   shop_label_name: string;
+// }
 
 //店舗画像の型定義
 interface ShopImage {

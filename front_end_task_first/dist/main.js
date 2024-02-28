@@ -16,6 +16,8 @@ export class Main {
         this.element.appendChild(shop_options_top.getElement());
         const shopdata = new ShopData();
         this.element.appendChild(shopdata.getElement());
+        const shop_options_top_secound = new ShopOptionsTop();
+        this.element.appendChild(shop_options_top_secound.getElement());
         const regionprefecture = new RegionPrefecture();
         this.element.appendChild(regionprefecture.getElement());
         const carstock = new CarStock();

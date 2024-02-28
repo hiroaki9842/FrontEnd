@@ -33,7 +33,7 @@ export class ShopData {
                     shop_info_inner_div.appendChild(shop_info_img_div);
                     const shop_info_img = document.createElement('img');
                     shop_info_img.classList.add('shop-info-img');
-                    shop_info_img.src = response.shop[shop_count].profile_img_path;
+                    shop_info_img.src = `https://221616.com/media/sms/img/thumb/0400x0300${response.shop[shop_count].img_path_main}`;
                     shop_info_img_div.appendChild(shop_info_img);
                     const shop_info_text_div = document.createElement('div');
                     shop_info_text_div.classList.add('shop-info-text_div');
@@ -49,7 +49,7 @@ export class ShopData {
                     shop_info_detail_dl.classList.add('shop-info-detail-dl');
                     shop_info_detail.appendChild(shop_info_detail_dl);
                     const dt_text = ["住所", "電話番号", "店舗案内", "営業時間"];
-                    for (let shop_info_detail_dtdd_count = 0; shop_info_detail_dtdd_count <= 3; shop_info_detail_dtdd_count++) {
+                    for (let shop_info_detail_dtdd_count = 0; shop_info_detail_dtdd_count <= 4; shop_info_detail_dtdd_count++) {
                         const shop_info_detail_dt = document.createElement('dt');
                         shop_info_detail_dt.textContent = dt_text[shop_info_detail_dtdd_count];
                         shop_info_detail_dl.appendChild(shop_info_detail_dt);
@@ -57,20 +57,64 @@ export class ShopData {
                         shop_info_detail_dd.classList.add('shop-info-detail-dd');
                         switch (shop_info_detail_dtdd_count) {
                             case 0:
+                                shop_info_detail_dd.classList.add('shop-info-detail-dd-zero');
                                 shop_info_detail_dd.textContent = response.shop[shop_count].disp_dept_address;
+                                const look_map = document.createElement('div');
+                                look_map.classList.add('look-map');
+                                look_map.textContent = "地図を見る";
+                                shop_info_detail_dd.appendChild(look_map);
                                 break;
                             case 1:
+                                shop_info_detail_dd.classList.add('shop-info-detail-dd-first');
                                 shop_info_detail_dd.textContent = response.shop[shop_count].freedial;
+                                const free_icon = document.createElement('div');
+                                free_icon.classList.add('free-icon');
+                                free_icon.textContent = "無料";
+                                shop_info_detail_dd.appendChild(free_icon);
                                 break;
                             case 2:
                                 shop_info_detail_dd.textContent = response.shop[shop_count].location_text;
                                 break;
                             case 3:
-                                shop_info_detail_dd.textContent = `${response.shop[shop_count].next_day_opening_time} ~ ${response.shop[shop_count].next_day_closing_time}`;
+                                if (response.shop[shop_count].today_opening_time == null) {
+                                    shop_info_detail_dd.innerHTML = "<p class=shop-info-detail-dd-third>本日休業</p>";
+                                }
+                                else {
+                                    shop_info_detail_dd.innerHTML = `<p>${response.shop[shop_count].today_opening_time} ~ ${response.shop[shop_count].today_closing_time} <span class=open-day>現在営業中</span></p>`;
+                                }
+                                const closed_day = document.createElement('p');
+                                closed_day.classList.add('closed-day');
+                                if (response.shop[shop_count].calendars &&
+                                    response.shop[shop_count].calendars.length > 0 &&
+                                    response.shop[shop_count].calendars[0] &&
+                                    response.shop[shop_count].calendars[0].month !== undefined) {
+                                    closed_day.textContent = `【休店日】${response.shop[shop_count].calendars[0].month}月${response.shop[shop_count].calendars[0].holidays}/${response.shop[shop_count].calendars[1].month}月${response.shop[shop_count].calendars[1].holidays}`;
+                                }
+                                else {
+                                    closed_day.textContent = "【休店日】2月 未定 / 3月 未定";
+                                }
+                                shop_info_detail_dd.appendChild(closed_day);
                                 const temporarily_closed_comment = document.createElement('p');
                                 temporarily_closed_comment.classList.add('temporarily_closed_comment');
                                 temporarily_closed_comment.textContent = "※都合により臨時休業となる場合がございます。";
                                 shop_info_detail_dd.appendChild(temporarily_closed_comment);
+                                break;
+                            case 4:
+                                if (response.shop[shop_count].shop_labels &&
+                                    response.shop[shop_count].shop_labels.length > 0 &&
+                                    response.shop[shop_count].shop_labels &&
+                                    response.shop[shop_count].shop_labels !== undefined) {
+                                    const label_ul = document.createElement('ul');
+                                    label_ul.classList.add('label-ul');
+                                    shop_info_detail.appendChild(label_ul);
+                                    response.shop[shop_count].shop_labels.forEach(label => {
+                                        const label_li = document.createElement('li');
+                                        label_li.classList.add('label-li');
+                                        label_li.textContent = `${label.shop_label_name}`;
+                                        console.log(label.shop_label_name);
+                                        label_ul.appendChild(label_li);
+                                    });
+                                }
                         }
                         shop_info_detail_dl.appendChild(shop_info_detail_dd);
                     }
@@ -100,15 +144,18 @@ export class ShopData {
                             case 2:
                                 const banner_img = document.createElement('img');
                                 banner_img.classList.add('banner-img');
+                                if (shop_count !== 1) {
+                                    banner_img.src = 'https://221616.com/assets/admin/images/content/client_upload_221616store_1706688741073.jpg';
+                                }
+                                else {
+                                    banner_img.src = 'https://221616.com/assets/admin/images/content/client_upload_161616_1707876467347.jpg';
+                                }
                                 shop_info_button_li.appendChild(banner_img);
                                 break;
                         }
                     }
                 }
-                console.log('Shop :', response.shop.length);
-                console.log('Shop :', response.shop[0]);
-                console.log('休日(月):', response.shop[1].calendars[0].month);
-                console.log('休日(日):', response.shop[1].calendars[0].holidays);
+                console.log('shop_labels:', response.shop[1].shop_labels);
             }
             else {
                 console.error('取得したデータが不正です。');
