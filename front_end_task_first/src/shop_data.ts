@@ -82,7 +82,7 @@ export class ShopData {
                 //dt内容の初期設定
                 const dt_text =["住所","電話番号","店舗案内","営業時間"]
 
-                for(let shop_info_detail_dtdd_count = 0; shop_info_detail_dtdd_count <= 3; shop_info_detail_dtdd_count++){
+                for(let shop_info_detail_dtdd_count = 0; shop_info_detail_dtdd_count <= 4; shop_info_detail_dtdd_count++){
                   const shop_info_detail_dt = document.createElement('dt')
                   shop_info_detail_dt.textContent = dt_text[shop_info_detail_dtdd_count]
                   shop_info_detail_dl.appendChild(shop_info_detail_dt)
@@ -138,6 +138,25 @@ export class ShopData {
                     temporarily_closed_comment.classList.add('temporarily_closed_comment')
                     temporarily_closed_comment.textContent = "※都合により臨時休業となる場合がございます。"
                     shop_info_detail_dd.appendChild(temporarily_closed_comment)
+                    break
+
+                  case 4:
+                    if(response.shop[shop_count].shop_labels &&
+                    response.shop[shop_count].shop_labels.length > 0 &&
+                    response.shop[shop_count].shop_labels &&
+                    response.shop[shop_count].shop_labels !== undefined
+                    ){
+                      const label_ul = document.createElement('ul')
+                      label_ul.classList.add('label-ul')
+                      shop_info_detail.appendChild(label_ul)
+                      response.shop[shop_count].shop_labels.forEach(label => {
+                        const label_li = document.createElement('li')
+                        label_li.classList.add('label-li')
+                        label_li.textContent = `${label.shop_label_name}`
+                        console.log(label.shop_label_name)
+                        label_ul.appendChild(label_li)
+                      });
+                    }
                   }
                   shop_info_detail_dl.appendChild(shop_info_detail_dd)
                 }
@@ -183,17 +202,17 @@ export class ShopData {
 
       ////////// ログ表示//////////////////////////////////////////
       //TODO:ラベル表示// 
-      console.log('shop_labels:', response.shop[0].shop_labels[0]);
-      console.log('shop_labels:', response.shop[0].shop_labels[0].shop_label_name);
+      // console.log('shop_labels:', response.shop[0].shop_labels[0]);
+      // console.log('shop_labels:', response.shop[0].shop_labels[0].shop_label_name);
       console.log('shop_labels:', response.shop[1].shop_labels);
-      console.log('shop_labels:', response.shop[2].shop_labels);
-      console.log('shop_labels:', response.shop[2].shop_labels[0].shop_label_name);
-      console.log('shop_labels:', response.shop[2].shop_labels[1].shop_label_name);
-      console.log('shop_labels:', response.shop[2].shop_labels[2].shop_label_name);
-      console.log('shop_labels:', response.shop[3].shop_labels);
-      console.log('shop_labels:', response.shop[3].shop_labels[0].shop_label_name);
-      console.log('shop_labels:', response.shop[3].shop_labels[1].shop_label_name);
-      console.log('shop_labels:', response.shop[3].shop_labels[2].shop_label_name);
+      // console.log('shop_labels:', response.shop[2].shop_labels);
+      // console.log('shop_labels:', response.shop[2].shop_labels[0].shop_label_name);
+      // console.log('shop_labels:', response.shop[2].shop_labels[1].shop_label_name);
+      // console.log('shop_labels:', response.shop[2].shop_labels[2].shop_label_name);
+      // console.log('shop_labels:', response.shop[3].shop_labels);
+      // console.log('shop_labels:', response.shop[3].shop_labels[0].shop_label_name);
+      // console.log('shop_labels:', response.shop[3].shop_labels[1].shop_label_name);
+      // console.log('shop_labels:', response.shop[3].shop_labels[2].shop_label_name);
       // console.log('caption:', response.shop[0].shop_labels[2].shop_label_name);
      ////////// ログ表示//////////////////////////////////////////
 
