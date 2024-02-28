@@ -1,6 +1,5 @@
 import './car_stock.css'; 
 
-// TODO:中古車情報をAPIで取得;
 export class CarStock {
   private element: HTMLElement;
 
