@@ -56,7 +56,7 @@ export class ShopData {
 
               const shop_info_img = document.createElement('img')
               shop_info_img.classList.add('shop-info-img')
-              shop_info_img.src = response.shop[shop_count].profile_img_path //TODO:画像が表示できるようにする
+              shop_info_img.src = `https://221616.com/media/sms/img/thumb/0400x0300${response.shop[shop_count].img_path_main}`;
               shop_info_img_div.appendChild(shop_info_img)
 
             //店舗情報テキスト
@@ -190,10 +190,15 @@ export class ShopData {
                       shop_info_button_li.appendChild(reservation_button)
                       break
 
+                      
                     case 2:
                       const banner_img = document.createElement('img')
                       banner_img.classList.add('banner-img')
-                      banner_img.src = response.shop[shop_count].profile_img_path
+                      if(shop_count !== 1){
+                        banner_img.src = 'https://221616.com/assets/admin/images/content/client_upload_221616store_1706688741073.jpg'
+                      }else{
+                        banner_img.src = 'https://221616.com/assets/admin/images/content/client_upload_161616_1707876467347.jpg'
+                      }
                       shop_info_button_li.appendChild(banner_img)
                       break
                 }
@@ -201,7 +206,6 @@ export class ShopData {
     }
 
       ////////// ログ表示//////////////////////////////////////////
-      //TODO:ラベル表示// 
       // console.log('shop_labels:', response.shop[0].shop_labels[0]);
       // console.log('shop_labels:', response.shop[0].shop_labels[0].shop_label_name);
       console.log('shop_labels:', response.shop[1].shop_labels);
