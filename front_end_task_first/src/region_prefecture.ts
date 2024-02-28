@@ -1,6 +1,5 @@
 import './region_prefecture.css'; 
 
-// TODO:市区町村、都道府県をAPI取得;
 export class RegionPrefecture {
   private element: HTMLElement;
 

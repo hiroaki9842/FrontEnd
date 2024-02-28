@@ -75,8 +75,6 @@
   font-weight: 700!important;
 }
 
-/* TODO:※の修正とQAの表示; */
-
 .question_item_h4_span::before{
   display: block;
     width: 28px;

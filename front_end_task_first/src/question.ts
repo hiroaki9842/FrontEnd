@@ -72,7 +72,7 @@ export class Question {
           case 1:
             question_item_h4_span.textContent = "鳥取県にある中古車を見たいのですが、インターネットで見ることはできますか？"
             question_item_answer_span.textContent ="はい、下記リンクから鳥取県の中古車をご覧いただけます。"
-            question_item_link.textContent = "https://221616.com/search/tottori/" ;//TODO:API取得URL?;
+            question_item_link.textContent = "https://221616.com/search/tottori/"
             question_item_text.textContent = "その他、サイトには載っていない新着中古車が店頭に並んでいる場合もございますので、ぜひご来店いただき、お店のスタッフにお声がけください。"
             question_item.appendChild(question_item_link_div);
             question_item_link_div.appendChild(question_item_link);

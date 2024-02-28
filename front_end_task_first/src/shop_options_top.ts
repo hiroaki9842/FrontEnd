@@ -1,6 +1,4 @@
 import './shop_options_top.css'; 
-
-// TODO:検索件数をAPIで取得する
 export class ShopOptionsTop {
   private element: HTMLElement;
 
