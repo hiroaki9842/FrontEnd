@@ -75,6 +75,9 @@ export class CarStock {
                   const img_tag = document.createElement('img')
                   img_tag.classList.add('img-tag')
                   img_figure.appendChild(img_tag)
+                  img_tag.src = `https://placehold.jp/d5e2df/ffffff/290x218.png?text=%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB`;
+
+                  
 
                   const img_figcaption = document.createElement('figcaption')
                   img_figcaption.classList.add('img-figcaption')

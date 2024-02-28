@@ -76,6 +76,15 @@ ul{
   justify-content: flex-start;
 }
 
+.img-a{
+width: 310px;
+}
+
+.img-figure{
+  margin-bottom: 20px;
+  margin-left: 3px;
+}
+
 .img-tag{
   display: block;
   height: auto;
@@ -134,7 +143,6 @@ ul{
 
 .car-stock-date,.datalist{
   align-items: center;
-  border-left: 1px solid #333;
   color: #333;
   display: flex;
   font-size: 11px;
@@ -142,6 +150,9 @@ ul{
   line-height: 1;
   margin: 5px 0 0;
   padding: 0 10px;
+}
+.datalist{
+  border-left: 1px solid #333;
 }
 
 .car-stock-date,.lower,.datalist,.ttl{
