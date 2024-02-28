@@ -76,3 +76,33 @@
 }
 
 /* TODO:※の修正とQAの表示; */
+
+.question_item_h4_span::before{
+  display: block;
+    width: 28px;
+    height: 28px;
+    content: "Q";
+    background: #40969b;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 14px;
+    margin: 0 10px 0 0;
+    float: left;
+}
+
+.question_item_answer_span::before{
+  display: block;
+  width: 22px;
+  height: 22px;
+  content: "A";
+  border: #40969b 3px solid;
+  font-family: Arial,Helvetica,sans-serif;
+  color: #40969b;
+  text-align: center;
+  line-height: 22px;
+  border-radius: 30px;
+  margin: 0 10px 0 0;
+  float: left;
+}
